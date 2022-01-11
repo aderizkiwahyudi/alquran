@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #3FA796;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #338b7d;
+}
+
+::-webkit-scrollbar {
+    background: #ddd;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 190, 190);
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3FA796;
+    z-index: 15;
+}
+
+#loading .loading-title img {
+    border-radius: 50px;
+    margin-bottom: 200px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: #3FA796;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 16pt;
+    margin: 0;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color :#fff;
+}
+
+header .bars {
+    margin-right: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+aside {
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 25%;
+    padding-top: 68px;
+    overflow-y: scroll;
+}
+
+.chapter {
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+.breadcrumb-item-chapter {
+    margin-left: 20px;
+}
+
+.chapter.active {
+    background: #3FA796;
+}
+
+.chapter.active a {
+    color: #fff;
+}
+
+.chapter:hover {
+    background: #3FA796;
+    cursor: pointer;
+}
+
+.chapter:hover a {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.chapter h4 {
+    font-size: 12pt;
+    margin: 0;
+}
+
+.chapter p {
+    font-size: 9pt;
+    margin: 0;
+}
+
+.chapter .name-latin .number {
+    background: url('../../img/number.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-size: 9pt;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding-top: 9px;
+    transition: all 0.3s;
+}
+
+.chapter:hover .name-latin .number {
+    background-image: url('../../img/number_white.png');
+    color: #3FA796;
+}
+
+.chapter.active .name-latin .number {
+    background-image: url('../../img/number_white.png');
+    color: #3FA796;
+}
+
+main {
+    padding-top: 65px;
+}
+
+.breadcrumb {
+    background: #fff;
+    padding: 15px 20px;
+    z-index: 11;
+}
+
+.breadcrumb .chapter-title h4 {
+    font-size: 12pt;
+    margin: 0;
+    font-weight: 500;
+}
+
+.breadcrumb .chapter-audio i {
+    font-size: 15pt;
+}
+
+main .item .information {
+    padding: 10px;
+}
+
+main .item {
+    padding: 10px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+main .item .number {
+    background: url('../../img/number.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-size: 9pt;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding-top: 9px;
+    transition: all 0.3s;
+}
+
+main .item .ayat h2 {
+    text-align: right;
+}
+
+main .item .ayat .latin {
+    color: #3FA796;
+    font-size: 12pt;
+    margin-bottom: 0;
+}
+
+main .item .ayat .translate {
+    font-size: 10pt;
+}
+
+@media screen and (max-width:765px) {
+    aside {
+        display: none;
+        width: 100%;
+        z-index: 5;
+    }
+
+    aside::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .slideIn {
+        display: block;
+        animation: slideIn 0.3s;
+    }
+
+    @keyframes slideIn {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+            display: block;
+        }
+    }
+
+    .slideOut {
+        animation: slideOut 0.3s;
+    }
+
+    @keyframes slideOut {
+        from {
+            left: 0%;
+        }
+        to {
+            left: -100%;
+            display: none;
+        }
+    }
+}
