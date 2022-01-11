@@ -146,4 +146,36 @@ $(document).ready(() => {
             changeVarses();
         }
     });
+
+    /* Breadcrumb Button */
+    $('.credit').on('click', () => {
+        Swal.fire({
+            confirmButtonColor: '#338b7d',
+            html: `
+            <div style='text-align:left;'>
+                <h4>Al-Qur'an</h4>
+                <p>Aplikasi ini di buat untuk membaca Al-Qur'an dengan mudah dan lebih fleksibel dimanapun kita berada.</p>
+                <h4>Version</h4>
+                <p>1.0.0</p>
+                <h4>Credit</h4>
+                <p>Ade Rizki Wahyudi</p>
+                <h4>Tanggal Terbit</h4>
+                <p>Januari, 11 2022</p>
+                <h4>Support</h4>
+                <p>
+                    <img src='https://www.seekpng.com/png/detail/380-3807393_unsri-vector-logo-logo-universitas-sriwijaya.png' width='75px' alt='unsri'/>
+                    <img src='https://pbs.twimg.com/profile_images/572300601967398912/pBlA0xwX_400x400.png' width='75px' alt='unsri'/>
+                </p>
+            </div>
+            `,
+        });
+    });
+
+    $('.belum-tersedia').on('click', () => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Maaf, untuk versi saat ini fitur belum tersedia.',
+        })
+    })
 })
